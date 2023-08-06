@@ -1,0 +1,298 @@
+﻿prompt,output
+"Planning a vacation can be both exciting and overwhelming. The process starts with the decision to take a trip. Once this is decided, the next critical step is to determine the budget, which plays a significant role in shaping the rest of the planning process.
+
+If the budget is substantial, an international destination might be considered. If it's more modest, a local destination will likely be more suitable. Once the budget-driven choice is made, it's essential to research about the chosen destination, learning about local culture, must-visit places, and any potential safety issues.
+
+This research phase might change one's perspective on the destination. If that happens, the process loops back to choosing a new destination. Otherwise, the plan proceeds to the booking phase.
+
+Booking starts with flights. If flights are not available for the desired dates, the process will have to loop back to the choice of dates. Once flights are booked, it's time to look for accommodations. Unavailability of hotels can also trigger a loop back to adjust the dates or even reconsider the destination.
+
+Next comes local transportation. If all aspects align - flights, hotel, and local transport, the trip is ready to be confirmed. Otherwise, necessary adjustments are made until all pieces fit together.","graph LR
+A[Decide to plan a vacation] --> B[Determine the budget]
+B --> C{Budget is high?}
+C -- Yes --> D[Choose international destination]
+C -- No --> E[Choose local destination]
+D --> F[Research about destination]
+E --> F
+F --> G{Like the destination?}
+G -- Yes --> H[Book flights]
+G -- No --> C
+H --> I{Flights available?}
+I -- Yes --> J[Book a hotel]
+I -- No --> H
+J --> K{Hotel available?}
+K -- Yes --> L[Book local transportation]
+K -- No --> J
+L --> M{Local transportation available?}
+M -- Yes --> N[Confirm the vacation]
+M -- No --> L"
+"Building a house is a major undertaking. It starts with the decision to build a home, followed by choosing a suitable plot of land. Financing is the next crucial step, which if successful, leads to hiring an architect to draft the house plans.
+
+If the architect's plan is approved, the process continues with hiring a contractor. Otherwise, the plan is revised until approval. Once a contractor is on board, they procure the necessary materials and start the construction.
+
+During construction, inspections are held to ensure the building meets all the regulations. If any issues are identified during inspection, the construction halts, the issues are fixed, and a re-inspection is scheduled. If the inspection is passed, construction proceeds and eventually completes, allowing the proud homeowners to move in.","graph LR
+A[Decide to build a house] --> B[Choose a plot of land]
+B --> C[Obtain financing]
+C --> D[Hire an architect]
+D --> E{Architect's plan approved?}
+E -- Yes --> F[Hire a contractor]
+E -- No --> D
+F --> G[Contractor procures materials]
+G --> H[Start construction]
+H --> I{Inspection passes?}
+I -- Yes --> J[Finish construction]
+I -- No --> K[Fix issues and re-inspect]
+K --> I
+J --> L[Move in]"
+"Adopting a pet is a rewarding experience that starts with the decision to add a new member to your family. The first step is to decide on the type of pet that suits your lifestyle and home environment.
+
+Once the type of pet is chosen, it's essential to research the needs of that particular pet, including food, exercise, and healthcare requirements. If, after research, you feel confident about meeting the pet's needs, the next step is to find a shelter.
+
+Visiting the shelter and interacting with potential pets is an emotional experience. If you connect with a pet, you proceed with the adoption process; if not, you might choose to visit other shelters or wait for new arrivals.
+
+Once you have found the perfect pet, you go through the adoption process, and if successful, you bring your new family member home.","graph LR
+A[Decide to adopt a pet] --> B[Choose the type of pet]
+B --> C[Research about the needs of the pet]
+C --> D{Ready to meet pet's needs?}
+D -- Yes --> E[Find a shelter]
+D -- No --> B
+E --> F[Visit the shelter]
+F --> G{Find a pet you like?}
+G -- Yes --> H[Complete the adoption process]
+G -- No --> E
+H --> I[Bring the pet home]"
+"Hosting a birthday party is a fun and gratifying process that starts with the decision to throw a party. The date and location are set next, followed by deciding on the guest list.
+
+The next step is to send out invitations. If the majority of invitees confirm their attendance, the planning continues with organizing the food and entertainment. If not, the process might loop back to adjust the date or the guest list.
+
+Once the food and entertainment are sorted, the decorations are planned. If all goes smoothly, the process continues to the day of the party; if not, adjustments are made. Finally, the party is hosted and, hopefully, enjoyed by all.","graph LR
+A[Decide to host a party] --> B[Set date and location]
+B --> C[Decide on the guest list]
+C --> D[Send out invitations]
+D --> E{Majority confirms?}
+E -- Yes --> F[Organize food and entertainment]
+E -- No --> B
+F --> G[Plan decorations]
+G --> H{All set smoothly?}
+H -- Yes --> I[Host the party]
+H -- No --> F"
+"Starting a business is a complex but rewarding process. It begins with an idea, followed by conducting market research to validate the viability of the idea. If the market research results are positive, the business plan is drafted; if not, a new idea is considered.
+
+Next is securing financing. If successful, the business can be legally established, which includes registering the business, getting necessary licenses and permits. If the financing isn't secured, more funding options must be explored.
+
+After legal establishment, the location is chosen, and hiring begins. If suitable employees are found, the business opens; if not, the hiring process continues. Then comes the marketing and sales stage to attract customers and generate revenue. Over time, the business operations are evaluated, and improvements are made.","graph LR
+A[Idea] --> B[Conduct market research]
+B --> C{Positive results?}
+C -- Yes --> D[Draft business plan]
+C -- No --> A
+D --> E[Secure financing]
+E --> F{Financing secured?}
+F -- Yes --> G[Legally establish the business]
+F -- No --> E
+G --> H[Choose location and hire employees]
+H --> I{Suitable employees found?}
+I -- Yes --> J[Open business]
+I -- No --> H
+J --> K[Marketing and sales]
+K --> L[Evaluate and improve operations]"
+"Writing a book starts with a basic idea. This idea is then expanded into a full-fledged plot. If the plot is satisfactory, the character creation begins; if not, the plot is revised.
+
+Once the characters are established, the actual writing process begins. If the writer is satisfied with the first draft, it is edited and proofread; if not, it is rewritten.
+
+The final draft is then sent to beta readers. If their feedback is positive, the manuscript is submitted to publishers; if not, the manuscript is revised according to the feedback.
+
+If the manuscript is accepted by a publisher, it goes into production; if it is rejected, it is either revised and resubmitted, or submitted to another publisher. Once the book is published, marketing and sales efforts begin.","graph LR
+A[Idea] --> B[Expand into plot]
+B --> C{Plot satisfactory?}
+C -- Yes --> D[Create characters]
+C -- No --> B
+D --> E[Write first draft]
+E --> F{Satisfied with draft?}
+F -- Yes --> G[Edit and proofread]
+F -- No --> E
+G --> H[Send to beta readers]
+H --> I{Positive feedback?}
+I -- Yes --> J[Submit to publishers]
+I -- No --> G
+J --> K{Manuscript accepted?}
+K -- Yes --> L[Go into production]
+K -- No --> J
+L --> M[Marketing and sales]"
+"Running a marathon is a test of endurance that requires rigorous preparation. The process begins with the decision to run a marathon. Next, a physical check-up is crucial to ensure you're fit for the intense training.
+
+Based on the doctor's approval, you start a training regimen. If you're coping well with the training, you continue; if not, you adjust the regimen. Nutrition also plays a vital role in the preparation.
+
+Registration for the marathon is the next step. On the day of the marathon, if the weather is fine and you're feeling well, you participate; otherwise, you may choose to withdraw. After the marathon, it's important to take ample rest and recover.","graph LR
+A[Decide to run a marathon] --> B[Physical check-up]
+B --> C{Doctor's approval?}
+C -- Yes --> D[Start training regimen]
+C -- No --> B
+D --> E{Coping well with training?}
+E -- Yes --> F[Plan nutrition]
+E -- No --> D
+F --> G[Register for marathon]
+G --> H{Good weather & feeling well?}
+H -- Yes --> I[Participate in marathon]
+H -- No --> J[Choose to withdraw]
+I --> K[Rest and recover]"
+"Starting a blog is a way to share your thoughts, ideas, or expertise with the world. The process starts with choosing a topic for the blog. Once the topic is chosen, you decide on the blogging platform and design the blog.
+
+If you're satisfied with the design, you start writing posts; if not, you revisit the design. Once you have enough posts, you launch the blog. After the launch, if the blog is getting traffic and positive feedback, you continue writing posts; if not, you work on marketing the blog more effectively.
+
+Continuous learning and updating of skills is an ongoing process in blogging. Over time, you might consider monetizing the blog through ads, sponsored content, or creating your own products or services.","graph LR
+A[Choose a topic] --> B[Decide on blogging platform]
+B --> C[Design the blog]
+C --> D{Satisfied with design?}
+D -- Yes --> E[Start writing posts]
+D -- No --> C
+E --> F[Launch the blog]
+F --> G{Getting traffic and positive feedback?}
+G -- Yes --> H[Continue writing posts]
+G -- No --> I[Work on marketing]
+H --> J[Learn and update skills]
+J --> K[Consider monetizing]"
+"Creating a mobile app begins with a concept. This concept is developed into a detailed plan, which includes designing wireframes and prototypes. If the prototypes are satisfactory, the app development begins; if not, the prototypes are improved.
+
+Once the app is developed, it undergoes rigorous testing. If the testing results are positive, the app is prepared for launch; if not, the bugs are fixed and testing is conducted again.
+
+Once the app is launched, it's important to monitor user feedback. If the feedback is positive, updates and new features are planned; if the feedback is negative, improvements are made based on user suggestions.","graph LR
+A[Concept] --> B[Develop detailed plan]
+B --> C[Design wireframes and prototypes]
+C --> D{Prototypes satisfactory?}
+D -- Yes --> E[Develop app]
+D -- No --> C
+E --> F[Test app]
+F --> G{Positive testing results?}
+G -- Yes --> H[Prepare for launch]
+G -- No --> F
+H --> I[Launch app]
+I --> J[Monitor user feedback]
+J --> K{Positive feedback?}
+K -- Yes --> L[Plan updates and new features]
+K -- No --> M[Improve based on user suggestions]"
+"Preparing a research paper begins with choosing a topic. Once the topic is chosen, a thorough literature review is conducted. If sufficient information is found, a research question is developed; if not, a new topic is chosen.
+
+Based on the research question, a research methodology is planned. If the methodology is approved by the supervisor, data collection begins; otherwise, the methodology is revised.
+
+Once data collection is completed, data analysis begins. If the results are significant, the paper is drafted; if not, more data may need to be collected. Once the draft is completed, it's reviewed and revised until it's ready for submission.","graph LR
+A[Choose a topic] --> B[Conduct literature review]
+B --> C{Sufficient information found?}
+C -- Yes --> D[Develop research question]
+C -- No --> A
+D --> E[Plan research methodology]
+E --> F{Methodology approved by supervisor?}
+F -- Yes --> G[Collect data]
+F -- No --> E
+G --> H[Analyze data]
+H --> I{Results significant?}
+I -- Yes --> J[Draft paper]
+I -- No --> G
+J --> K[Review and revise draft]
+K --> L[Submit paper]"
+"Building a personal computer starts with determining the purpose of the computer, such as gaming, work, or everyday use. Once that's established, the components needed for the computer are selected based on the purpose. If the components are available and within the budget, they are purchased; if not, the components or budget are reconsidered.
+
+After the components are secured, the assembly begins. If the assembly goes smoothly, the computer is ready for setup; if not, troubleshooting is required.
+
+Once the setup is completed, software installations and updates are done. Following this, the computer is tested. If the tests are successful, the computer is ready for use; if not, further troubleshooting is required.","graph LR
+A[Determine purpose of the computer] --> B[Select components]
+B --> C{Components available and within budget?}
+C -- Yes --> D[Purchase components]
+C -- No --> B
+D --> E[Assemble computer]
+E --> F{Assembly successful?}
+F -- Yes --> G[Setup computer]
+F -- No --> H[Troubleshoot]
+G --> I[Install software and updates]
+I --> J[Test computer]
+J --> K{Tests successful?}
+K -- Yes --> L[Use computer]
+K -- No --> H"
+"Making a movie starts with a story idea. Once the idea is fleshed out into a screenplay, a director and key cast members are chosen. If everyone agrees with the vision for the movie, pre-production begins; if not, revisions are made to the screenplay or changes are made to the team.
+
+During pre-production, locations are scouted, sets are built, and schedules are created. Production then begins with filming. If filming goes according to plan, post-production starts; if not, changes are made to the schedule or scenes are reshot.
+
+Post-production involves editing, adding special effects, and scoring. Once completed, the movie is screened to select audiences. If feedback is positive, the movie is released; if not, additional edits are made.","graph LR
+A[Story idea] --> B[Develop screenplay]
+B --> C[Choose director and key cast]
+C --> D{Agreement on vision?}
+D -- Yes --> E[Begin pre-production]
+D -- No --> B
+E --> F[Begin filming]
+F --> G{Filming successful?}
+G -- Yes --> H[Begin post-production]
+G -- No --> F
+H --> I[Screen to select audiences]
+I --> J{Positive feedback?}
+J -- Yes --> K[Release movie]
+J -- No --> H"
+"Launching a music album begins with composing songs. Once the songs are composed, they are recorded. If the artist and producer are satisfied with the recording, the songs are mixed and mastered; if not, adjustments are made or songs are re-recorded.
+
+The album artwork and promotional materials are then created. If approved, they are printed and distributed; if not, revisions are made. Once the album and promotional materials are ready, the release date is set.
+
+Leading up to the release, promotional events and appearances are planned. After the album is released, feedback from fans and critics is considered for future projects.","graph LR
+A[Compose songs] --> B[Record songs]
+B --> C{Satisfied with recording?}
+C -- Yes --> D[Mix and master songs]
+C -- No --> B
+D --> E[Create album artwork and promotional materials]
+E --> F{Artwork and materials approved?}
+F -- Yes --> G[Print and distribute]
+F -- No --> E
+G --> H[Set release date]
+H --> I[Plan promotional events]
+I --> J[Release album]
+J --> K[Consider feedback for future projects]"
+"Hosting a charity event starts with determining the cause and the goal for the event. Once these are set, a budget is created. If the budget is approved, the event date and venue are decided; if not, adjustments are made to the budget.
+
+Next, invitations are sent out. If the response is positive, the event planning continues; if not, more promotion is done or the guest list is expanded.
+
+On the day of the event, if everything goes smoothly, the event proceeds; if not, contingency plans are put into place. After the event, the funds raised are tallied and donated to the cause.","graph LR
+A[Determine cause and goal] --> B[Create budget]
+B --> C{Budget approved?}
+C -- Yes --> D[Decide date and venue]
+C -- No --> B
+D --> E[Send out invitations]
+E --> F{Positive response?}
+F -- Yes --> G[Plan event]
+F -- No --> E
+G --> H[Host event]
+H --> I{Event went smoothly?}
+I -- Yes --> J[Tally and donate funds]
+I -- No --> K[Implement contingency plans]"
+"Opening a restaurant starts with a concept and a business plan. Once these are set, financing is secured. If the financing is approved, the restaurant location is chosen; if not, other financing options are explored.
+
+The restaurant is then designed and built. If the construction is completed successfully, hiring for the restaurant begins; if not, changes are made to the plan or construction is delayed.
+
+Once the staff is trained and the restaurant is ready, a soft opening is held. If the soft opening is successful, the grand opening is planned; if not, adjustments are made based on the feedback.","graph LR
+A[Develop concept and business plan] --> B[Secure financing]
+B --> C{Financing approved?}
+C -- Yes --> D[Choose location]
+C -- No --> B
+D --> E[Design and build restaurant]
+E --> F{Construction successful?}
+F -- Yes --> G[Hire and train staff]
+F -- No --> E
+G --> H[Hold soft opening]
+H --> I{Soft opening successful?}
+I -- Yes --> J[Plan grand opening]
+I -- No --> G"
+"Planning a road trip starts with choosing a destination. Once the destination is chosen, the route is planned. If the route seems feasible, accommodations and attractions are researched; if not, a new destination or route is considered.
+
+The car is then checked and prepared. If the car is in good condition, packing begins; if not, necessary repairs are made.
+
+If the weather forecast is good and everyone is ready, the road trip begins. During the trip, if all goes well, the itinerary is followed; if not, adjustments are made. After the trip, memories are shared and new trips are planned.","graph LR
+A[Choose destination] --> B[Plan route]
+B --> C{Route feasible?}
+C -- Yes --> D[Research accommodations and attractions]
+C -- No --> A
+D --> E[Check and prepare car]
+E --> F{Car in good condition?}
+F -- Yes --> G[Pack]
+F -- No --> E
+G --> H{Good weather and everyone ready?}
+H -- Yes --> I[Begin road trip]
+H -- No --> G
+I --> J{Trip going well?}
+J -- Yes --> K[Follow itinerary]
+J -- No --> I
+K --> L[Share memories and plan new trips]"

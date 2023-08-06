@@ -1,0 +1,27 @@
+services:
+  llm_ia3:
+    build: ./
+    image: threemonth_peft_ia3
+    volumes:
+      - ./:/workspace
+    container_name: threemonth_peft_ia3
+    ports:
+      - "8323:8323"
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            device_ids: ['0, 1, 2']
+            capabilities: [gpu]
+
+    entrypoint: 
+      - jupyter
+      - notebook
+      - --allow-root
+      - --no-browser
+      - --ip=0.0.0.0
+      - --port=8323
+      - --NotebookApp.token=''
+      - --NotebookApp.password=''
+    tty: true
